@@ -112,7 +112,7 @@ class Bootstrap extends AbstractSingleton
     {
         if (!array_key_exists($key, $this->services)) {
             $this->services[$key] = $service;
-						$this->service->register();
+            $service->register();
         }
 
         return $this;

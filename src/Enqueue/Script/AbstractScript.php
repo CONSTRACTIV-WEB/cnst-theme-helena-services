@@ -1,8 +1,6 @@
 <?php
 
-namespace Constractiv\Helena\Services\Lib\Enqueue;
-
-use Constractiv\Helena\Services\Enqueue\Script\AbstractScript;
+namespace Constractiv\Helena\Services\Enqueue\Script;
 
 abstract class AbstractScript implements InterfaceScript
 {
@@ -17,6 +15,6 @@ abstract class AbstractScript implements InterfaceScript
      */
     public const VERSION = null;
 
-    abstract private function register(): self;
-    abstract private function enqueue(): self;
+    abstract public function register(): self;
+    abstract public function enqueue(): self;
 }

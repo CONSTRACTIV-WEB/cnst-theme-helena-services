@@ -4,6 +4,6 @@ namespace Constractiv\Helena\Services\Enqueue\Script;
 
 interface InterfaceScript
 {
-    private function register(): self;
-    private function enqueue(): self;
+    public function register(): self;
+    public function enqueue(): self;
 }

@@ -6,7 +6,7 @@ use Constractiv\Helena\Services\Service\AbstractService;
 use Constractiv\Helena\Services\Enqueue\Style\Style;
 use Constractiv\Helena\Services\Enqueue\Script\Script;
 
-class Enqueue extends AbstractService
+abstract class Enqueue extends AbstractService
 {
     private array $registeredScripts = array();
     private array $registeredStyles = array();
@@ -17,12 +17,14 @@ class Enqueue extends AbstractService
             return;
         }
 
-        \array_walk($this->config->get('styles'), function ($style) {
+        $styles = $this->config->get('styles');
+
+        \array_walk($styles, function ($style) {
             $this->registeredScripts['styles'][] = new Style(
                 $style['handle'],
                 $style['src'],
                 $style['deps'],
-                $style['media']
+                isset($style['media']) ?? $style['media']
             );
         });
     }
@@ -33,7 +35,9 @@ class Enqueue extends AbstractService
             return;
         }
 
-        \array_walk($this->config->get('scripts'), function ($script) {
+        $scripts = $this->config->get('scripts');
+
+        \array_walk($scripts, function ($script) {
             $this->registeredScripts[$script['handle']] = (new Script(
                 $script['handle'],
                 $script['src'],

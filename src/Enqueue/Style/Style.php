@@ -2,7 +2,7 @@
 
 namespace Constractiv\Helena\Services\Enqueue\Style;
 
-use Constractiv\Helena\Services\Enqueue\AbstractStyle;
+use Constractiv\Helena\Services\Enqueue\Style\AbstractStyle;
 
 class Style extends AbstractStyle
 {

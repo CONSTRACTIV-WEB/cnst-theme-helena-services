@@ -11,6 +11,6 @@ abstract class AbstractStyle implements InterfaceStyle
      */
     public const VERSION = null;
 
-    abstract private function register(): self;
-    abstract private function enqueue(): self;
+    abstract public function register(): self;
+    abstract public function enqueue(): self;
 }
