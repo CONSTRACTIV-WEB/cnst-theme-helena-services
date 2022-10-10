@@ -1,0 +1,19 @@
+{
+    "name": "constractiv/cnst-theme-helena-services",
+    "description": "A package with theme-boilerplate configuration options",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Constractiv\\Helena\\Services\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "CONSTRACTIV",
+            "email": "entwicklung@constractiv.de"
+        }
+    ],
+    "require": {
+        "squizlabs/php_codesniffer": "*"
+    }
+}

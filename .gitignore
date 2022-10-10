@@ -1,0 +1,64 @@
+# Ignore OSX files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.AppleDouble
+.LSOverride
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+Icon
+
+# Ignore files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.vscode
+
+# Ignore composer files
+vendor/
+
+# Ignore database files
+*.sql
+*.sqlite
+
+# Ignore log files
+**/logs
+*.log
+
+# Ignore node dependencies
+node_modules/
+
+# Ignore any mod rewrite files
+.htaccess
+
+# Ignore all files that start with ~
+~*
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
