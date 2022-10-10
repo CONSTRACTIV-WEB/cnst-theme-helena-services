@@ -6,12 +6,20 @@ use Constractiv\Helena\Services\Enqueue\AbstractStyle;
 
 class Style extends AbstractStyle
 {
+    private string $handle;
+    private string $src;
+    private array $deps = array();
+
     public function __construct(
-        private string $handle,
-        private string $src,
-        private $deps = array(),
-        private string $media = 'all'
+        string $handle,
+        string $src,
+        array $deps = array(),
+        string $media = 'all'
     ) {
+        $this->handle = $handle;
+        $this->src = $src;
+        $this->deps = $deps;
+        $this->media = $media;
     }
 
     public function register(): self

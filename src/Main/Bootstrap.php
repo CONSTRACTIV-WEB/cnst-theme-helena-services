@@ -66,8 +66,7 @@ class Bootstrap extends AbstractSingleton
             function ($data, $class) {
                 $this->bindService(
                     $this->getServiceClassname($class),
-                    (new $class($data)
-                    )->register()
+                    (new $class($data))
                 );
             }
         );
@@ -113,6 +112,7 @@ class Bootstrap extends AbstractSingleton
     {
         if (!array_key_exists($key, $this->services)) {
             $this->services[$key] = $service;
+						$this->service->register();
         }
 
         return $this;

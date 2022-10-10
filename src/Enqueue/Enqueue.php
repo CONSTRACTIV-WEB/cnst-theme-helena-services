@@ -48,13 +48,13 @@ class Enqueue extends AbstractService
             return;
         }
 
-        \array_walk($this->config->get('localize'), function ($key, $objects) {
+        /*\array_walk($this->config->get('localize'), function ($key, $objects) {
             if (array_key_exists($key, $this->registeredScripts)) {
                 foreach ($objects as $object_name, $l10n) {
                     $this->registeredScripts[$key]->localize($object_name, $l10n);
                 }
             }
-        });
+        });*/
     }
 }
 }

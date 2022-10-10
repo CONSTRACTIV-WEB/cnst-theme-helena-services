@@ -6,11 +6,18 @@ use Constractiv\Helena\Services\Enqueue\Script\AbstractScript;
 
 class Script extends AbstractScript
 {
+    private string $handle;
+    private string $src;
+        private $deps = array();
+
     public function __construct(
-        private string $handle,
-        private string $src,
-        private $deps = array()
+        string $handle,
+        string $src,
+        array $deps = array()
     ) {
+        $this->handle = $handle;
+        $this->src = $src;
+        $this->deps = $deps;
     }
 
     public function register(): self
