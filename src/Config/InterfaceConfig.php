@@ -4,7 +4,7 @@ namespace Constractiv\Helena\Services\Config;
 
 interface InterfaceConfig
 {
-    public function get(string $key): mixed;
+    public function get(string $key);
 
     public function has(string $key): bool;
 

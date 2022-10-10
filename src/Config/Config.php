@@ -33,7 +33,7 @@ class Config implements InterfaceConfig
      * Get specific item by key
      * @return array
      */
-    public function get(string $key): array
+    public function get(string $key)
     {
         if (!$this->has($key)) {
             return $this;
