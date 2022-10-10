@@ -31,9 +31,9 @@ class Config implements InterfaceConfig
 
     /**
      * Get specific item by key
-     * @return mixed
+     * @return array
      */
-    public function get(string $key): mixed
+    public function get(string $key): array
     {
         if (!$this->has($key)) {
             return $this;
