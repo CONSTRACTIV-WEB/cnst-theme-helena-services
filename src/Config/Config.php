@@ -24,7 +24,7 @@ class Config implements InterfaceConfig
      * Set specific item by key
      * @return void
      */
-    public function set(string $key, string|array|callable $val): void
+    public function set(string $key, $val): void
     {
         $this->items[$key] = $val;
     }
