@@ -57,4 +57,3 @@ class Enqueue extends AbstractService
         });*/
     }
 }
-}
