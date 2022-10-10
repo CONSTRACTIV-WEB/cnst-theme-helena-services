@@ -20,12 +20,13 @@ abstract class Enqueue extends AbstractService
         $styles = $this->config->get('styles');
 
         \array_walk($styles, function ($style) {
-            $this->registeredScripts['styles'][] = new Style(
+            $this->registeredScripts['styles'][] = (new Style(
                 $style['handle'],
                 $style['src'],
                 $style['deps'],
                 isset($style['media']) ?? $style['media']
-            );
+            ))->register()->enqueue();
+            ;
         });
     }
 
